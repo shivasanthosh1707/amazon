@@ -15,7 +15,7 @@ app.use(express.json())
 app.use(router)
 app.use(Router)
 app.use(productRouter)
-app.use(cors)
+app.use(cors())
 
 // mongoose.connect('mongodb://localhost:27017')
   mongoose.connect('mongodb+srv://shivasanthoshqt:Raavan143@cluster0.b4z0d.mongodb.net/amazon-clone-app')  
