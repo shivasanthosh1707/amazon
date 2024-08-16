@@ -7,6 +7,16 @@ const jwt = require('jsonwebtoken')
 Router.post('/signup', signup )
 Router.post( '/login' , login )
 
+Router.get("/", (req, res) => {
+res.setHeader("Access-Control-Allow-Origin", "*")
+res.setHeader("Access-Control-Allow-Credentials", "true");
+res.setHeader("Access-Control-Max-Age", "1800");
+res.setHeader("Access-Control-Allow-Headers", "content-type");
+res.setHeader( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" ); 
+ });
+
+
+
 Router.get('/getUsers', (req,res,next)=>{
    let token = (req.headers.authorization)
    if(!token){
