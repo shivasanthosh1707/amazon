@@ -65,4 +65,11 @@ router.get("/getProduct/:id",async(req,res)=>{
         result
     })
 })
+router.get("/home",async(req,res)=>{
+   
+   return res.json({
+        success : 'Product details',
+        
+    })
+})
 module.exports = router
