@@ -17,6 +17,9 @@ let productSchema = new mongoose.Schema({
         type : String,
         required : true
     },
+     Category :{
+        type : String
+    },
     Thumbnail:{
         data : Buffer,
         contentType : String
