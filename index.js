@@ -15,7 +15,11 @@ app.use(express.json())
 app.use(router)
 app.use(Router)
 app.use(productRouter)
-app.use(cors())
+// app.use(cors())
+app.use(cors({
+  origin: 'https://amazon-frontend-f1lt.onrender.com',
+  allowedHeaders: ['Content-Type'] // Add Content-Type to allowed headers
+}));
 
 // mongoose.connect('mongodb://localhost:27017')
   mongoose.connect('mongodb+srv://shivasanthoshqt:Raavan143@cluster0.b4z0d.mongodb.net/amazon-clone-app')  
